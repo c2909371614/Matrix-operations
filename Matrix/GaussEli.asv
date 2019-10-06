@@ -1,0 +1,18 @@
+function res = GaussEli(a)
+res = re_ech_form(a);
+Size = size(a);
+row = Size(1);
+column = Size(2);
+
+for i = 1:row
+    %--find the povit position---
+    pivot = i;
+    while ~res(i, pivot) && pivot <= column
+        pivot = pivot + 1;
+    end
+    res(i,:) = res(i,:) / res(i, povit);%let pivot en
+    
+    for j = i : row
+        res(j:,) = res(j,:) - res(i,:) * res(j, povit);
+        
+    
